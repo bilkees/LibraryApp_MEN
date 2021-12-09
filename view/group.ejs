@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%=header%></title>
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/skeleton.css">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/fontAwesome.css">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div class="back">
+        <a class="button " href="javascript:history.back()">Back </a>
+        <a class="button " href="/">Home</a>
+    </div>
+
+
+    <section class="books_page">
+
+
+        <h1 id="books">
+            <%=header%>
+        </h1>
+        <div class="search">
+            <form class="search-box">
+                <input type="text" placeholder=" Search <%=search%>  " />
+                <button type="reset"></button>
+            </form>
+        </div>
+
+
+    </section>
+
+    <section>
+        <div class="col">
+            <div class="row1">
+                <% for(var i=0; i < data.length; i++) { %>
+                    <div class=" b">
+                        <a href="/group/<%=search%>s/<%=data[i].id%>">
+                            <img src="/images/<%=data[i].image%>">
+                            <br>
+                            <span class="book_name">
+                                <%=data[i].title%><br>
+                            </span>
+                        </a>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+    </section>
+    <!-- --------------------------------footer------------------- -->
+    <section id="contact">
+
+        <div class="ftr">
+
+            <a class="ftr_icon" href="#"><i class="fa fa-twitter "></i>&nbsp; </a>
+            <a class="ftr_icon" href="#"><i class="fa fa-facebook "></i>&nbsp; </a>
+            <a class="ftr_icon" href="#"><i class="fa fa-phone "></i>&nbsp; </a>
+            <a class="ftr_icon" href="#"><i class="fa fa-map-marker"></i>&nbsp; </a>
+        </div>
+        <footer>
+            <p style="text-align: center;"> Copyright @ 2021 | Privacy Policy</p>
+        </footer>
+
+    </section>
+
+
+</body>

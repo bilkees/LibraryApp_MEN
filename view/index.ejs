@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/fontAwesome.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+
+
+
+</head>
+
+<body>
+    <div class="login">
+        <a class="button" href="/logout">Logout</a>
+    </div>
+    <section class="sec-1">
+        <div class="home">
+            <nav>
+                <div class="heading">
+                    <h1 id="head">THE LIBRARY</h1>
+                </div>
+                <div class="navBar" id="mainNavBar">
+                    <a class="button" href="/group/books">Books</a>
+                    <a class="button" href="/group/authors">Authors</a>
+                    <% if(role=='admin' ) { %>
+                        <a class="button" href="/add/add_book">Add Books</a>
+                    <a class="button" href="/add/add_author">Add Authors</a>
+                    <% } %>
+
+                    <a class="button" href="#contact">Contact</a>
+                </div>
+            </nav>
+            <div class="search">
+                <form class="search-box">
+                    <input type="text" placeholder=" Search book title or author " />
+                    <button type="reset"></button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="block">
+            <!-- -----------------------------------------about us------------------------------------- -->
+            <h3>About Us</h3>
+            <div class="container">
+                <p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
+                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
+                    dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                    sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam
+                    est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius
+                    modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima
+                    veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea
+                    commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+                    molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+            </div>
+            <!-- -----------------------------------------our people------------------------------------- -->
+            <h5>Our People</h5>
+            <div class="row container">
+                <div class="a">
+                    <img src="images/lib1.jpg">
+                    <div class="team-title">
+                        <h5>Meryl Streep</h5>
+                    </div>
+                </div>
+                <div class="a">
+                    <img src="images/lib2.jpg">
+                    <div class="team-title">
+                        <h5>King Bach</h5>
+                    </div>
+                </div>
+                <div class="a">
+                    <img src="images/lib3.jpg">
+                    <div class="team-title">
+                        <h5>Naomi Watts</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <!-- ------------------------most popular-------------------------- -->
+
+    <section>
+
+    </section>
+    <!-- --------------------------------footer------------------- -->
+    <section id="contact">
+
+        <div class="ftr">
+
+            <a class="ftr_icon" href="#"><i class="fa fa-twitter "></i>&nbsp; </a>
+            <a class="ftr_icon" href="#"><i class="fa fa-facebook "></i>&nbsp; </a>
+            <a class="ftr_icon" href="#"><i class="fa fa-phone "></i>&nbsp; </a>
+            <a class="ftr_icon" href="#"><i class="fa fa-map-marker"></i>&nbsp; </a>
+        </div>
+        <footer>
+            <p style="text-align: center;"> Copyright @ 2021 | Privacy Policy</p>
+        </footer>
+
+    </section>
+
+</body>
+
+</html>

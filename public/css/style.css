@@ -1,0 +1,330 @@
+.navBar {
+  /* background-color: #009cde; */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+/*Floats each item to the left with padding of 14 & 16 px.
+  Removes the underline with text decoration = none.*/
+/* .navBar a {
+  float: left;
+  color: blue;
+  padding: 5px 40px;
+  text-decoration: none;
+  font-size: 17px;
+  font-family: Tahoma;
+  text-shadow: 5px 5px 12px black;
+
+} */
+
+/*Background color change during hover state*/
+
+/*Hides the menu Icon which will show when the nav needs to be responsive*/
+.navBar .icon {
+  display: none;
+}
+
+/*Set your custom screen width here replacing 700*/
+@media (max-width: 700px) {
+  /*Ignores the first link (which is Home) in the div and       applies 'display = none' to everything else.   Basically hiding everything but Home*/
+  .navBar a:not(:first-child) {
+    display: none;
+  }
+  /*Brings the menu icon into view and floats it to the right*/
+  .navBar a.icon {
+    display: block;
+    float: right;
+  }
+
+  /*The navBar class will be changed to 'navBar responsive' using JS. This chunk of CSS makes the menu icon stay where it is by making the position absolute within it's parent 'right top corner'. Without this, the icon will get kicked around when the items are collapsed and expanded*/
+  .navBar.responsive {
+    position: relative;
+  }
+  .navBar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  /*Removes the originally set float and brings them to view*/
+  .navBar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/* --------------------------------------------login button---------------------------------------- */
+.login {
+  text-align: end;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+
+.login > button:hover {
+  color: #8f1515;
+}
+/* --------------------------------------------navbar anchor---------------------------------------- */
+.navBar > a {
+  color: white;
+  text-shadow: 5px 5px 12px black;
+  background-color: #99aeb03b;
+  font-weight: 900;
+  margin: 5px;
+}
+.navBar > a:hover {
+  color: white;
+  text-shadow: 5px 5px 12px black;
+  background-color: #726e753b;
+  font-weight: 900;
+  margin: 5px;
+}
+
+/* -------------------------------------------------heading The Library--------------------------------------------- */
+.heading {
+  text-align: center;
+}
+
+.heading > h1 {
+  font-size: 50px;
+  color: aliceblue;
+  text-shadow: #5d4444bf 5px 5px 12px;
+  font-weight: 400;
+  letter-spacing: 6px;
+  /* font-family: sans-serif; */
+}
+/* -------------------------------------------------Body--------------------------------------------- */
+section {
+  display: block;
+}
+
+.sec-1 {
+  margin-top: 0px;
+  padding-top: 30px;
+  background-image: url(https://cdn.hipwallpaper.com/i/36/54/42FIaP.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 700px;
+  height: 700px;
+  /* opacity: 90%; */
+  display: flex;
+  flex-direction: column;
+  -ms-flex-align: center;
+  align-items: center !important;
+  width: auto;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+}
+
+.block {
+  background: ghostwhite;
+  padding: 60px;
+  /* width: 820px; */
+  margin: 0 auto;
+  text-align: justify;
+  
+}
+/* -------------------------------------------------------Our people------------------------------------------- */
+.back {
+  display: flex;
+  justify-content: space-between ;
+
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+
+}
+
+h3,h1,
+h5 {
+  text-align: center;
+}
+
+.books_page>h1{
+  letter-spacing: 6px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.a > img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+.row1 {
+  display: flex;
+  flex-direction: row;
+  padding : 20px 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.row2 {
+  display: flex;
+  flex-direction: row;
+}
+.b> a{
+  color: #030303;
+  text-decoration: none;
+  font-weight: 600;
+
+}
+
+.b > a > img {
+  width: 200px;
+  height: 300px;
+  margin: 20px 20px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow:         3px 3px 5px 6px rgb(150, 149, 149);
+
+}
+.col,
+.col1 {
+  margin: 50px 50px;
+  background-color: rgb(248 248 255);
+  padding: 150px 150px ;
+  justify-content: center;
+}
+.col1 {
+  margin: 150px 300px;
+}
+
+.ftr {
+  margin-top: 0px;
+  background: rgb(46 46 46);
+  height: 100px;
+
+  display: flex;
+  flex-direction: row;
+  padding: 150px 200px;
+  justify-content: space-evenly;
+  align-items: stretch !important;
+}
+
+.ftr_icon {
+  padding-right: 10px;
+  font-size: 60px;
+  font-weight: inherit;
+  color: white;
+}
+
+/* --------------------------------------------------------------search-------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  
+}
+
+.search-box {
+  /* border: solid 5px black; */
+  display: inline-block;
+  position: relative;
+  border-radius: 60px;
+}
+.search-box input[type="text"] {
+  font-family: Raleway, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
+  padding: 5px 40px 5px 10px;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 50px;
+  transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55) 150ms;
+  box-shadow: 6px 6px 12px black;
+}
+.search-box input[type="text"]:focus {
+  outline: none;
+}
+.search-box input[type="text"]:focus,
+.search-box input[type="text"]:not(:placeholder-shown) {
+  width: 330px;
+  transition: width 800ms cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+.search-box input[type="text"]:focus + button[type="reset"],
+.search-box input[type="text"]:not(:placeholder-shown) + button[type="reset"] {
+  bottom: 13px;
+  right: 10px;
+  transition: bottom 150ms ease-out 800ms, right 150ms ease-out 800ms;
+}
+.search-box input[type="text"]:focus + button[type="reset"]:after,
+.search-box
+  input[type="text"]:not(:placeholder-shown)
+  + button[type="reset"]:after {
+  top: 0;
+  right: 10px;
+  opacity: 1;
+  transition: top 150ms ease-out 950ms, right 150ms ease-out 950ms,
+    opacity 150ms ease 950ms;
+}
+.search-box button[type="reset"] {
+  background-color: transparent;
+  width: 25px;
+  height: 25px;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: -13px;
+  right: -15px;
+  transition: bottom 150ms ease-out 150ms, right 150ms ease-out 150ms;
+}
+.search-box button[type="reset"]:before,
+.search-box button[type="reset"]:after {
+  content: "";
+  height: 25px;
+  border-left: solid 5px black;
+  position: absolute;
+  transform: rotate(-45deg);
+}
+.search-box button[type="reset"]:after {
+  transform: rotate(45deg);
+  opacity: 0;
+  top: -20px;
+  right: -10px;
+  transition: top 150ms ease-out, right 150ms ease-out, opacity 150ms ease-out;
+}
+/*----------------------------------- search bar ends------------------------------- */
+
+/* --------------------------groups--------------------------------------------------- */
+#books {
+  color: white;
+  justify-content: center;
+  text-shadow: 5px 5px 12px black;
+  padding-top: 50px;
+ 
+}
+
+.book_name {
+  
+  text-align: center;
+  margin-bottom: 30px;
+}
+.books_page {
+  background-color: rgb(95 29 29);
+  height: 300px;
+}
+

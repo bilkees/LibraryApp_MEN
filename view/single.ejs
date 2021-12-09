@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=data.title%>
+    </title>
+
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="stylesheet" href="/css/single.css">
+    <link rel="stylesheet" href="/css/fontAwesome.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+</head>
+
+<body>
+
+    <br>
+    <div class="back">
+        <a class="button " href="javascript:history.back()">Back </a>
+        <a class="button " href="/">Home</a>
+    </div>
+
+    <input type="hidden" id="bookId" value="<%=data.id%>">
+    <input type="hidden" id="code" value="<%=code%>">
+
+    <div class="section hero">
+        <div class="container">
+            <div class="row">
+                <div class="one-half column col-6 textshadow">
+                    <h4 class="titleshadow">
+                        <%=data.title%>
+                    </h4>
+                    <% if(code==1) { %>
+                        <ul>
+                            <li>Author : <%=data.author%>
+                            </li>
+                            <li>Language : <%=data.language%>
+                            </li>
+                            <li>Pages : <%=data.pageCount%>
+                            </li>
+                            <li>Category : <%=data.categories%>
+                            </li>
+                            <li>Published Date : <%=data.publishedDate%>
+                            </li>
+                        </ul>
+
+                        <div class="column">
+                            <div class="one-third row value">
+                                <a class="button btn1" href="#">Add to List</a>
+                            </div>
+                            <div class="one-third row value">
+                                <a class="button btn1" href="#">Read</a>
+                            </div>
+                            <div class="one-third row value">
+                                <a class="button btn1" href="#">Listen</a>
+                            </div>
+                        </div>
+                        <% if(role=='admin' ) { %>
+                            <div class="column">
+                                <div class=" row value">
+                                    <a class="button btn2"href="/add/update_book/<%=data.id%>" id="updatebook">Update</a>
+                                </div>
+                                <div class=" row value">
+                                    <a class="button btn2"  onclick="deleteFunc()" id="deletebook">Delete</a>
+                                </div>
+                            </div>
+                            <% } %>
+                                <% } else { %>
+                                    <ul>
+                                        <li>Nationality : <%=data.country%>
+                                        </li>
+                                        <li>Date of Birth : <%=data.dob%>
+                                        </li>
+                                        <li>Famous works : <%=data.FamousWorks%>
+                                        </li>
+                                    </ul>
+
+                                    <div class="column">
+                                        <div class="one-third row value">
+                                            <a class="button btn1" href="#">Wiki</a>
+                                        </div>
+                                        <div class="one-third row value">
+                                            <a class="button btn1" href="#">Images</a>
+                                        </div>
+                                        <div class="one-third row value">
+                                            <a class="button btn1" href="#">Books</a>
+                                        </div>
+                                    </div>
+                                    <% if(role=='admin' ) { %>
+                                        <div class="column">
+                                            <div class=" row value">
+                                                <a class="button btn2" href="/add/update_author/<%=data.id%>" id="updateauthor">Update</a>
+                                            </div>
+                                            <div class=" row value">
+                                                <a class="button btn2"  onclick="deleteFunc()"
+                                                    id="deleteauthor">Delete</a>
+                                            </div>
+                                        </div>
+                                        <% } %>
+                                            <% } %>
+
+                </div>
+
+                <div class="one-half column phones col-6">
+                    <img class="phone" src="/images/<%=data.image%>">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="section get-help">
+        <div class="container-fluid textshadow">
+            <h3 class="section-heading">About</h3>
+            <br>
+            <p class="section-description">
+                <%=data.about%>
+            </p>
+        </div>
+    </div>
+    <section id="contact">
+        <footer>
+            <p style="text-align: center;"> Copyright @ 2021 | Privacy Policy</p>
+        </footer>
+    </section>
+
+
+
+</body>
+<script src="/JS/modify.js"></script>
+
+</html>

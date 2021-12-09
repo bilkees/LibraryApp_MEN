@@ -1,0 +1,180 @@
+* {
+  margin: 0px;
+  padding: 0%;
+}
+.login {
+  text-align: end;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+
+.back {
+  display: flex;
+  justify-content: space-between ;
+
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 5px;
+
+}
+/* Shared
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.button {
+  border-radius: 100px;
+}
+
+/* Sections
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+  padding: 8rem 0 7rem;
+  text-align: center;
+}
+.section-heading,
+.section-description {
+  margin-bottom: 1.2rem;
+}
+
+/* Help
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.get-help {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Categories
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.categories {
+  background-image: url("../images/values-bg.jpg");
+  background-size: cover;
+  color: #fff;
+}
+.categories .section-description {
+  margin-bottom: 4rem;
+}
+
+/* Bigger than 550 */
+@media (min-width: 550px) {
+  .section {
+    padding: 12rem 0 11rem;
+  }
+  .hero {
+    padding-bottom: 12rem;
+    text-align: left;
+    height: 165px;
+  }
+  .phone {
+    position: absolute;
+    top: -7rem;
+    right: 3rem;
+    max-height: 362px;
+    z-index: 3;
+    width:400px;
+  }
+  .phone + .phone {
+    top: -6rem;
+    display: block;
+    max-width: 73.8%;
+    right: 0;
+    z-index: 2;
+    max-height: 338px;
+  }
+  .hero-heading {
+    font-size: 2.4rem;
+  }
+}
+
+/* Bigger than 750 */
+@media (min-width: 750px) {
+  .hero {
+    height: 190px;
+  }
+  .hero-heading {
+    font-size: 2.6rem;
+  }
+  .section {
+    padding: 14rem 0 15rem;
+  }
+  .hero {
+    padding: 16rem 0 14rem;
+  }
+  .section-description {
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .phone {
+    top: -14rem;
+    right: 5rem;
+    max-height: 510px;
+  }
+  .phone + .phone {
+    top: -12rem;
+    max-height: 472px;
+  }
+  .categories {
+    padding: 15rem 0 8rem;
+  }
+}
+
+/* Bigger than 1000 */
+@media (min-width: 1000px) {
+  .section {
+    padding: 20rem 0 19rem;
+  }
+  .hero {
+    padding: 20rem 0;
+  }
+  .hero-heading {
+    font-size: 3rem;
+  }
+  .phone {
+    top: -16rem;
+    max-height: 615px;
+  }
+  .phone + .phone {
+    top: -14rem;
+    max-height: 570px;
+  }
+}
+.btn1 {
+  width: 200px;
+
+
+}
+
+.btn2 {
+  width: 200px;
+  background-color: rgb(117, 116, 116)!important;
+  color: white;
+  
+}
+
+.phone{
+    border-radius: 10px;
+    border: black ;
+    
+}
+.add1{
+   text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 200px;
+}
+.add1>h1,h4{
+  letter-spacing: 6px;
+}
+.phones>img{
+  width: 400px;
+  height:600px;
+  object-fit: cover;
+  box-shadow:         3px 3px 5px 6px rgb(150, 149, 149);}
+
+  .textshadow{
+    text-shadow: #aaa4a4bf 2px 2px 8px;
+    letter-spacing: 2px;
+    ;
+  }
+  .titleshadow{
+    font-size: xx-large;
+    
+    font-weight:500;
+  }

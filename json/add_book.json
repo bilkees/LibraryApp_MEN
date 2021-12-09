@@ -1,0 +1,14 @@
+{
+    "add_book":[
+        {
+            "title":"Add Book",
+            "header1":"Book Title",
+            "author":"Book Author",
+            "text":"Book Details",
+            "pageCount":"Page Counts",
+            "publishedDate":"Published Date",
+            "categories":"Genre",
+            "language":"Language"
+        }
+    ]
+}

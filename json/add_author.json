@@ -1,0 +1,12 @@
+{
+    "add_author":[
+        {
+            "title":"Add Author",
+            "header1":"Author Title",
+            "country":"Country",
+            "dob":"Date of Birth",
+            "text":"Author Details",
+            "FamousWorks":"Famous Works"
+        }
+    ]
+}

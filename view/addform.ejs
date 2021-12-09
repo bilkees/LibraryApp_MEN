@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%=data[0].title%>
+    </title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+    <link rel="stylesheet" href="/css/single.css">
+    <link rel="stylesheet" href="/css/fontAwesome.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <br>
+    <div class="login">
+        <a class="button" href="/">Home</a>
+    </div>
+    <div class="container add1">
+        <h1>
+            <%=data[0].title%>
+        </h1>
+    </div>
+    <!-- First row -->
+    <div class="container">
+        <% if(code==1) { %>
+            <form id='newForm' method="POST" action="/add/add_book" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="six columns">
+                        <label>
+                            <%=data[0].header1%>
+                        </label>
+                        <input class="u-full-width" type="text" name="header1" placeholder="<%=data[0].header1%>"
+                            id="addtitle" value="<%=olddata.title%>">
+                    </div>
+                    <div class="six columns">
+                        <label>
+                            <%=data[0].author%>
+                        </label>
+                        <input class="u-full-width " type="text" name="author" placeholder="<%=data[0].author%>"
+                            value="<%=olddata.author%>" id="addbook">
+                    </div>
+                </div>
+                <!-- Second row -->
+                <div class="row">
+                    <div class="six columns">
+                        <label>
+                            <%=data[0].pageCount%>
+                        </label>
+                        <input class="u-full-width" type="text" name="pageCount" placeholder="<%=data[0].pageCount%>"
+                            id="addtitle" value="<%=olddata.pageCount%>" />
+                    </div>
+                    <div class="six columns">
+                        <label>
+                            <%=data[0].publishedDate%>
+                        </label>
+                        <input class="u-full-width " type="text" name="publishedDate"
+                            placeholder="<%=data[0].publishedDate%>" id="addbook" value="<%=olddata.publishedDate%>">
+                    </div>
+                </div>
+                <!-- third row -->
+                <div class="row">
+                    <div class="six columns">
+                        <label>
+                            <%=data[0].categories%>
+                        </label>
+                        <input class="u-full-width" type="text" name="categories" placeholder="<%=data[0].categories%>"
+                            id="addtitle" value="<%=olddata.categories%>">
+                    </div>
+                    <div class="six columns">
+                        <label>
+                            <%=data[0].language%>
+                        </label>
+                        <input class="u-full-width " type="text" name="language" placeholder="<%=data[0].language%>"
+                            id="addbook" value="<%=olddata.language%>">
+                    </div>
+                </div>
+                <!-- textbox -->
+
+                <label>
+                    <%=data[0].text%>
+                </label>
+                <textarea class="u-full-width" placeholder="<%=data[0].text%>" name="text" id="addtext"
+                    value="<%=olddata.about%>"><%=olddata.about%></textarea>
+
+                <!-- image -->
+
+                <label>
+                    <input type="file" id="addfile" name="image" accept="image/jpeg,image/png"
+                        value="<%=olddata.image%>">
+                    <span class="label-body">Add only jpeg/png files</span>
+                    <!-- submit -->
+
+                    <% } else { %>
+                        <form id='newForm' method="POST" action="/add/add_author" enctype="multipart/form-data">
+                            <div class="row">
+                                <div class="six columns">
+                                    <label>
+                                        <%=data[0].header1%>
+                                    </label>
+                                    <input class="u-full-width" type="text" name="header1"
+                                        placeholder="<%=data[0].header1%>" id="addtitle" value="<%=olddata.title%>">
+                                </div>
+                                <div class="six columns">
+                                    <label>
+                                        <%=data[0].country%>
+                                    </label>
+                                    <input class="u-full-width " type="text" name="country"
+                                        placeholder="<%=data[0].country%>" id="addbook" value="<%=olddata.country%>">
+                                </div>
+                            </div>
+                            <!-- Second row -->
+                            <div class="row">
+                                <div class="six columns">
+                                    <label>
+                                        <%=data[0].dob%>
+                                    </label>
+                                    <input class="u-full-width" type="text" name="dob" placeholder="<%=data[0].dob%>"
+                                        id="addtitle" value="<%=olddata.dob%>">
+                                </div>
+                                <div class="six columns">
+                                    <label>
+                                        <%=data[0].FamousWorks%>
+                                    </label>
+                                    <input class="u-full-width " type="text" name="FamousWorks"
+                                        placeholder="<%=data[0].FamousWorks%>" id="addbook"
+                                        value="<%=olddata.FamousWorks%>">
+                                </div>
+                            </div>
+                            <!-- textbox -->
+
+                            <label>
+                                <%=data[0].text%>
+                            </label>
+                            <textarea class="u-full-width" placeholder="<%=data[0].text%>" name="text"
+                                id="addtext"><%=olddata.about%></textarea>
+
+                            <!-- image -->
+
+                            <label>
+                                <input type="file" id="addfile" name="image" accept="image/jpeg,image/png"
+                                    value="<%=olddata.image%>">
+                                <span class="label-body">Add only jpeg/png files</span>
+
+                                <% } %>
+
+
+
+                            </label>
+                            <input type="hidden" name="updateFlag" value="<%=update%>">
+                            <input type="hidden" name="bookid" value="<%=olddata.id%>">
+                            <input class="button-primary" type="submit" value="Submit" id="addsubmit">
+                        </form>
+    </div>
+</body>
+<script src="/JS/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</html>
